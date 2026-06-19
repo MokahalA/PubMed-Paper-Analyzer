@@ -1,5 +1,14 @@
 # PubMed Research Paper Analyzer
 
+<p align="center">
+  <img src="https://cdn.simpleicons.org/python" height="40" alt="Python" title="Python" />
+  <img src="https://cdn.simpleicons.org/flask" height="40" alt="Flask" title="Flask" />
+  <img src="https://cdn.simpleicons.org/sqlite" height="40" alt="SQLite" title="SQLite" />
+  <img src="https://cdn.simpleicons.org/streamlit" height="40" alt="Streamlit" title="Streamlit" />
+  <img src="https://cdn.simpleicons.org/langchain" height="40" alt="LangChain" title="LangChain" />
+  <img src="https://cdn.simpleicons.org/ollama" height="40" alt="Ollama" title="Ollama" />
+</p>
+
 [PubMed](https://pubmed.ncbi.nlm.nih.gov/about/) contains more than 40 million citations and abstracts of biomedical literature.
 
 This application allows you to search using PubMed, ingest research paper abstracts from your search, and ask questions about your selected papers using basic RAG (Retrieval-Augmented Generation).
@@ -37,8 +46,7 @@ Chat about your selected papers. The app retrieves their content, sends it to th
 
 ## How It Works
 
-[Diagram](demo_screenshots/pubmed_rag_pipeline.svg)
-
+![Architecture diagram — PubMed ingestion pipeline and RAG question-answering flow](demo_screenshots/pubmed_rag_pipeline.svg)
 
 ## Tech Stack
 
@@ -90,7 +98,7 @@ app/
   backend/api.py              # REST API
 pipeline/
   ingestion/                  # PubMed fetch & parse
-  processing/                 # Clean, normalize, dedupe
+  processing/                 # Clean, normalize, deduplicate
   embedding/                  # ChromaDB + embeddings
   retrieval/                  # Semantic search
   rag/                        # Question answering
