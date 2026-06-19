@@ -37,19 +37,8 @@ Chat about your selected papers. The app retrieves their content, sends it to th
 
 ## How It Works
 
-**Data ingestion pipeline**
+[Diagram](demo_screenshots/pubmed_rag_pipeline.svg)
 
-```
-PubMed query → fetch & parse XML → data cleaning & pre-processing → SQLite (metadata) + ChromaDB (embeddings)
-```
-
-**RAG flow**
-
-```
-User's question → retrieve selected papers using the data ingestion pipeline → Gemma 3 LLM provides the answer + sources used
-```
-
-Processed papers are stored in two places: **SQLite** holds structured metadata; **ChromaDB** holds vector embeddings for semantic search.
 
 ## Tech Stack
 
